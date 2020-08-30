@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../angular8-dashboard"
+		},
+		{
+			"path": "../my-angular-app"
+		}
+	],
+	"settings": {}
+}

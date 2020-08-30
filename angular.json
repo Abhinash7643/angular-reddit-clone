@@ -88,9 +88,10 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
           }
         },
         "lint": {
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "reddit-clone"
+    }
+  },
+  "defaultProject": "reddit-clone",
+  "cli": {
+    "analytics": "27495d9a-7ff0-4fd1-8268-70bd5d1a5453"
+  }
 }
