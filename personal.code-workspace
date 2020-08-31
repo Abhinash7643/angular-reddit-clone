@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "../my-angular-app"
+		},
+		{
+			"path": "../ui-template/basic-ecommerce-angular-app"
 		}
 	],
 	"settings": {}
