@@ -1,3 +1,7 @@
+import { SubreditSideBarComponent } from './shared/subredit-side-bar/subredit-side-bar.component';
+import { VoteButtonComponent } from './shared/vote-button/vote-button.component';
+import { SideBarComponent } from './shared/side-bar/side-bar.component';
+import { PostCardComponent } from './shared/post-card/post-card.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,6 +16,7 @@ import {NgxWebstorageModule} from 'ngx-webstorage';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { HomeComponent } from './home/home.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,11 @@ import { HomeComponent } from './home/home.component';
     HeaderComponent,
     LoginComponent,
     SignUpComponent,
-    HomeComponent
+    HomeComponent,
+    PostCardComponent,
+    SideBarComponent,
+    VoteButtonComponent,
+    SubreditSideBarComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +37,8 @@ import { HomeComponent } from './home/home.component';
     HttpClientModule,
     NgxWebstorageModule.forRoot(),
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

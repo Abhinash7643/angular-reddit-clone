@@ -43,7 +43,6 @@ export class LoginComponent implements OnInit {
    }
 
   ngOnInit(): void {
-
     this.activatedRoute.queryParams
       .subscribe(params => {
         if (params.registered !== undefined && params.registered === 'true') {
