@@ -1,3 +1,4 @@
+import { TokenInterceptor } from './auth/TokenInterceptor';
 import { SubreditSideBarComponent } from './shared/subredit-side-bar/subredit-side-bar.component';
 import { VoteButtonComponent } from './shared/vote-button/vote-button.component';
 import { SideBarComponent } from './shared/side-bar/side-bar.component';
@@ -11,12 +12,16 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {NgxWebstorageModule} from 'ngx-webstorage';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { HomeComponent } from './home/home.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CreateSubredditComponent } from './subreddit/create-subreddit/create-subreddit.component';
+import { CreatePostComponent } from './post/create-post/create-post.component';
+import { SubredditListComponent } from './subreddit/subreddit-list/subreddit-list.component';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PostCardComponent,
     SideBarComponent,
     VoteButtonComponent,
-    SubreditSideBarComponent
+    SubreditSideBarComponent,
+    CreateSubredditComponent,
+    CreatePostComponent,
+    SubredditListComponent
   ],
   imports: [
     BrowserModule,
@@ -38,9 +46,16 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     NgxWebstorageModule.forRoot(),
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    FontAwesomeModule
+    FontAwesomeModule,
+    EditorModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
