@@ -1,5 +1,5 @@
-import { SubredditService } from './../../subredit/subreddit.service';
-import { SubredditModel } from './../../subredit/SubredditModel';
+import { SubredditService } from './../subreddit.service';
+import { SubredditModel } from './../SubredditModel';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';

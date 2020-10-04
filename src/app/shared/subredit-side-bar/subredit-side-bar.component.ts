@@ -1,5 +1,5 @@
-import { SubredditService } from './../../subredit/subreddit.service';
-import { SubredditModel } from './../../subredit/SubredditModel';
+import { SubredditService } from './../../subreddit/subreddit.service';
+import { SubredditModel } from './../../subreddit/SubredditModel';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
